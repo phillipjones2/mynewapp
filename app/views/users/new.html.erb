@@ -1,0 +1,51 @@
+<h1>Signup!</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  Name: <%= f.text_field :first_name %>
+        <%= f.text_field :last_name %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+
+<% end %>
+
+
+<!-- <div class="container">
+
+
+    <%= title "Signup" %>
+
+  <h1>Sign Up</h1>
+  <form role="form">
+  <%= simple_form_for(@user) do |f| %>
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <%= f.input :first_name, label: false %>
+      </div>
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <%= f.input :last_name, label: false %>
+      </div>
+       <div class="form-group">
+        <label for="email">Email</label>
+        <%= f.input :email, label: false  %>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <%= f.input :password, label: false %>
+      </div>
+      <%= f.submit class:"btn btn-primary" %>
+    <% end %>
+    </form>
+
+    <% if @user.errors.any? %>
+    <ul class="Signup_Errors">
+      <% for message_error in @user.errors.full_messages %>
+      <li>*<%= message_error %></li>
+    </ul>
+    <% end %>
+  </div>
+  <% end %>
+</div> -->

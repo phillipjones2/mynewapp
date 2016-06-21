@@ -1,5 +1,7 @@
 class MovieQuotesController < ApplicationController
 
+  before_filter :authorize
+
   def create
     @movie = Movie.find(params[:movie_id])
     @movie_quote = @movie.movie_quotes.create(movie_quote_params)
